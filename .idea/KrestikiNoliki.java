@@ -40,6 +40,10 @@ public class KrestikiNoliki {
         while (!isMove) {
             x = console.nextByte();
             y = console.nextByte();
+            if ((x > 2 || x < 0) || (y > 2 || y < 0)) {
+                System.out.println("you can print just value from 0 to 2, try again");
+                continue;
+            }
             if (Pole[x][y].equals(" ")) {
                 Pole[x][y] = "O";
                 isMove = true;
